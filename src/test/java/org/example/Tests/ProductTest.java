@@ -3,9 +3,12 @@ package org.example.Tests;
 import org.example.Page.BrowserLaunch;
 import org.example.Page.LoginPage;
 import org.example.Page.ProductPage;
+import org.example.TestListener;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(TestListener.class)
 public class ProductTest extends BrowserLaunch {
 
     LoginPage login;
@@ -49,7 +52,4 @@ public class ProductTest extends BrowserLaunch {
     public void verifyProductDetailsTest() {
         product.verifyProductDetails();
     }
-
-
-
 }

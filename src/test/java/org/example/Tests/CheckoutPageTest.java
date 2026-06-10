@@ -4,9 +4,12 @@ import org.example.Page.AddToCartPage;
 import org.example.Page.BrowserLaunch;
 import org.example.Page.CheckoutPage;
 import org.example.Page.LoginPage;
+import org.example.TestListener;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(TestListener.class)
 public class CheckoutPageTest extends BrowserLaunch {
 
     LoginPage login;

@@ -15,7 +15,7 @@ public class AddToCartPage {
     By addToCartBtn = By.id("add-to-cart-sauce-labs-backpack");
     By cartBadge = By.className("shopping_cart_badge");
     By cartIcon = By.className("shopping_cart_link");
-    By  continueShoppingBtn = By.id("continue-shopping");
+    By continueShoppingBtn = By.id("continue-shopping");
 
     public void addProductToCart() {
 
@@ -30,10 +30,8 @@ public class AddToCartPage {
 
         Thread.sleep(10000);
 
-        driver.findElement(cartIcon).click();
-
-        Assert.assertTrue(
-                driver.getCurrentUrl().contains("cart.html"));
+       driver.findElement(cartIcon).click();
+        Assert.assertEquals(driver.getCurrentUrl(),"https://www.saucedemo.com/cart.html");
 
     }
 

@@ -2,7 +2,9 @@ package org.example.Page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import org.testng.Assert;
+
 
 public class LoginPage {
 
@@ -21,12 +23,8 @@ public class LoginPage {
 
     // Common Login Method
     public void login(String user, String pass) {
-       // driver.findElement(username).clear();
         driver.findElement(username).sendKeys(user);
-
-       // driver.findElement(password).clear();
         driver.findElement(password).sendKeys(pass);
-
         driver.findElement(loginBtn).click();
     }
 

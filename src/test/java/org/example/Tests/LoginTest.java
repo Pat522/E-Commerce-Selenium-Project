@@ -2,9 +2,12 @@ package org.example.Tests;
 
 import org.example.Page.BrowserLaunch;
 import org.example.Page.LoginPage;
+import org.example.TestListener;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(TestListener.class)
 public class LoginTest extends BrowserLaunch {
 
     LoginPage login;

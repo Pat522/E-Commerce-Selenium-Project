@@ -3,9 +3,12 @@ package org.example.Tests;
 import org.example.Page.AddToCartPage;
 import org.example.Page.BrowserLaunch;
 import org.example.Page.LoginPage;
+import org.example.TestListener;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(TestListener.class)
 public class AddToCartTest extends BrowserLaunch {
 
     LoginPage login;
@@ -14,9 +17,9 @@ public class AddToCartTest extends BrowserLaunch {
     @BeforeMethod
     public void setupPage() {
 
-      login = new LoginPage(driver);
-      login.login("standard_user", "secret_sauce");
-      cart = new AddToCartPage(driver);
+        login = new LoginPage(driver);
+        login.login("standard_user", "secret_sauce");
+        cart = new AddToCartPage(driver);
 
     }
 

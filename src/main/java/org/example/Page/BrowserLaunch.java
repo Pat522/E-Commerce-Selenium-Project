@@ -8,10 +8,10 @@ import org.testng.annotations.BeforeMethod;
 
 public class BrowserLaunch {
 
-    protected WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
-    public void setup() throws InterruptedException {
+    public void setup() {
 
         driver = new EdgeDriver();
         driver.manage().window().maximize();
@@ -23,12 +23,12 @@ public class BrowserLaunch {
 
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+    @AfterMethod
+    public void tearDown() {
+
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 }
