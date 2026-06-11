@@ -29,6 +29,7 @@ public class BrowserLaunch {
         if (driver != null) {
             driver.quit();
         }
+
     }
 
 }

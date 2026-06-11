@@ -14,16 +14,19 @@ public class LoginTest extends BrowserLaunch {
 
     @BeforeMethod
     public void setupPage() {
+
         login = new LoginPage(driver);
     }
 
     @Test
     public void validLoginTest() {
+
         login.ValidLogin();
     }
 
     @Test
     public void invalidUsernameTest() {
+
         login.InvalidUsername();
     }
 
@@ -49,11 +52,13 @@ public class LoginTest extends BrowserLaunch {
 
     @Test
     public void emptyUsernameAndPasswordTest() {
+
         login.EmptyUsernameAndPassword();
     }
 
     @Test
-    public void lockedUserTest() {
+    public void lockedUserTest()
+    {
         login.LockedUser();
     }
 
